@@ -5,13 +5,24 @@ import  random
 
 def From(email):
 
-    file=open('D:/User/Desktop/MY APPS/Gmail_Bot/Email.txt','a+')
-    content = file.read()
-    content = content.split('\n')
+    try:
+        file=open('D:/User/Desktop/MY APPS/Gmail_Bot/Email.txt','r')
+        content = file.read()
 
-    if email not in content:
-        file.write(email+"\n")
+        content = content.split('\n')
+
+        if email not in content:
+            file.close()
+            file = open('D:/User/Desktop/MY APPS/Gmail_Bot/Email.txt', 'a')
+            file.write(email+"\n")
         file.close()
+
+    except:
+        file = open('D:/User/Desktop/MY APPS/Gmail_Bot/Email.txt', 'a')
+        file.write(email + "\n")
+        file.close()
+
+
 
 
 def Options():
@@ -35,8 +46,10 @@ def Options():
 
         print('\n',c," : OTHER ")
         opt=int(input("\nChoice : "))
+        
         if opt !=(c):
             gmail_user = content[opt]
+           
         else:
             gmail_user = input("\nEnter Your Email : ")
             From(gmail_user)
@@ -45,9 +58,6 @@ def Options():
 
         gmail_user=input("\nEnter Your Email : ")
         From(gmail_user)
-
-
-
 
 Options()
 
@@ -59,20 +69,25 @@ inp=0
 iter=int(input("\nNo of Times : "))
 gmail_password = input('\nEnter Password : ')
 sent_from = gmail_user
-TO=input("\nEmail TO : ")
 
+TO=input("\nEmail TO : ")
+From(TO)
 
 msg=input("\nEnter The message  : ")
 
+print("\n1. Subject Random Number\n2. EDIT \n")
+o=int(input('Enter Your Choice : '))
+
+if o==2:
+    subject=input("\nEnter SUBJECT : ")
+else:
+    subject = '#$$*{}$$%'.format(random
+                          .randint(100000000,99999999999))
+        
+
 for _ in range(iter):
 
-
-
     to = [ TO ]
-
-    subject = '{}'.format(random
-                          .randint(100000000,99999999999))
-
     body=msg
 
     email_text = """From: %s
