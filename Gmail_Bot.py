@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 import smtplib
 import random
 
-path= "Enter the PATH TO STORE THE EMAIL IN "
+path= "D:/User/Desktop/MY APPS/Gmail_Bot/Email.txt"  #"Enter the PATH TO STORE THE EMAIL IN "
 
 
 def From(email):
@@ -39,7 +39,7 @@ def Options():
 
         c = 0
         for i in range(len(content)):
-            if len(content[i]) != 0:
+            if len(content[i]) != 0 and content[i]!='-1':
                 print('\n', ' ', c, ' : ', content[i])
                 c = c + 1
 
@@ -81,8 +81,9 @@ TOO=[]
 TO='initializing  TO'
 while(TO!='-1'):
     TO = input("\nEmail TO (enter \'-1\' to exit ): ")
-    TOO.append(TO)
-    From(TO)
+    if(TO!="-1"):
+        TOO.append(TO)
+        From(TO)
 
 print('\nEnter Message  Body :  ')
 
@@ -111,6 +112,7 @@ msgg['Subject']=subject
 for i in range(iter):
 
     for to in TOO:
+        print('TOO IS : ',to)
         msgg['To'] = to
         body = text
         body = MIMEText(body)
