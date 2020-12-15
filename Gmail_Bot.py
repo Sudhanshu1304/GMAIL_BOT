@@ -129,4 +129,3 @@ for i in range(iter):
             print('\nEmail sent!')
         except:
             print('Something went wrong...')
-
