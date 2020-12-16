@@ -55,7 +55,8 @@ multiple times** .
     ~~~python
 
         '''
-        You can drag and drop the file on the intrepter or CMD ,It will take the file path and will convert it into the correct format on its own 
+        You can drag and drop the file on the intrepter or CMD ,It will take the file path 
+        and will convert it into the correct format on its own 
         
         '''
 
