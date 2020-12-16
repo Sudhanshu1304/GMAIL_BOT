@@ -51,6 +51,15 @@ multiple times** .
         "2. Sends Multiple Files to Mutiple People at same time "
 
     ~~~
+* ### **Drag and Drop File**
+    ~~~python
+
+        '''
+        You can drag and drop the file on the intrepter or CMD ,It will take the file path and will convert it into the correct format on its own 
+        
+        '''
+
+    ~~~
 <br><br>
 
 
