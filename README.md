@@ -44,7 +44,13 @@ multiple times** .
             break
 
     ```
+* **SEND Multiple files** at the same time - **( New feature - Updated_Bot.py )**
+    ~~~python
 
+        "1. Send ->> .Pdf, .Txt  etc. "
+        "2. Sends Multiple Files to Mutiple People at same time "
+
+    ~~~
 <br><br>
 
 
